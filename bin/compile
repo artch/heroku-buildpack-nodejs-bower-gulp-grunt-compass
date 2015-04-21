@@ -25,7 +25,7 @@ node_version=$(curl --silent --get --data-urlencode "range=${semver_range}" http
 
 # Recommend using semver ranges in a safe manner
 if [ "$semver_range" == "null" ]; then
-  protip "Specify a node version in package.json"
+  protip "Specify a node version in package.json"bu
   semver_range=""
 elif [ "$semver_range" == "*" ]; then
   protip "Avoid using semver ranges like '*' in engines.node"
@@ -201,7 +201,7 @@ export PATH="$GEM_HOME/bin:$PATH"
   bundle install 2>&1 | indent
 
   # Run compass
-  HOME=$build_dir bundle exec compass compile
+  #HOME=$build_dir bundle exec compass compile
 )
 
 # cache ruby gems compass
