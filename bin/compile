@@ -202,17 +202,6 @@ export PATH="$GEM_HOME/bin:$PATH"
 
   # Run compass
   #HOME=$build_dir bundle exec compass compile
-  
-  echo "ls $build_dir"
-ls -lA $build_dir
-echo "ls $build_dir/.gem"
-ls -lA $build_dir/.gem
-echo "ls $build_dir/.gem/ruby"
-ls -lA $build_dir/.gem/ruby  
-echo "ls $build_dir/vendor"
-ls -lA $build_dir/vendor
-#echo "ls $build_dir/vendor/bundle"
-#ls -lA $build_dir/vendor/bundle
 )
 
 # cache ruby gems compass
