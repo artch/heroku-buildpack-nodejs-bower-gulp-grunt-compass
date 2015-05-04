@@ -66,10 +66,10 @@ export PATH="$GEM_HOME/bin:$PATH"
   
   echo "ls $build_dir"
 ls -lA $build_dir
-echo "ls $build_dir/vendor"
-ls -lA $build_dir/vendor
-echo "ls $build_dir/vendor/bundle"
-ls -lA $build_dir/vendor/bundle
+echo "ls $build_dir/.geb"
+ls -lA $build_dir/.gem
+echo "ls $build_dir/.gem/ruby"
+ls -lA $build_dir/.gem/ruby
 
   # Run bundler
   bundle install 2>&1 | indent
