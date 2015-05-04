@@ -47,8 +47,8 @@ fi
 # we do it globally because we want to be able to run bundle even
 # from within grunt
 export HOME=$build_dir
-export GEM_HOME=$build_dir/.gem/ruby/1.9.1
-export PATH="$GEM_HOME/bin:$PATH"
+#export GEM_HOME=$build_dir/.gem/ruby/1.9.1
+#export PATH="$GEM_HOME/bin:$PATH"
 
 (
   # porting in compass install
