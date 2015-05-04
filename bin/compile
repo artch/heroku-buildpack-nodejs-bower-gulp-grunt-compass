@@ -56,7 +56,7 @@ PATH=$PATH:$build_dir/vendor/node/bin
 cd $build_dir
 
 echo "!!!"
-ls -lA "vendor/bundle/ruby"
+ls -lA $build_dir
 
 # If node_modules directory is checked into source control then
 # rebuild any native deps. Otherwise, restore from the build cache.
