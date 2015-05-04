@@ -55,6 +55,9 @@ PATH=$PATH:$build_dir/vendor/node/bin
 # Run subsequent node/npm commands from the build path
 cd $build_dir
 
+echo "!!!"
+ls -lA "vendor/bundle/ruby"
+
 # If node_modules directory is checked into source control then
 # rebuild any native deps. Otherwise, restore from the build cache.
 if test -d $build_dir/node_modules; then
@@ -179,8 +182,6 @@ fi
 # this is required to execute bundle and store gems in cachedir
 # we do it globally because we want to be able to run bundle even
 # from within grunt
-echo "!!!"
-ls -lA "$build_dir/.gem/ruby"
 export HOME=$build_dir
 export GEM_HOME=$build_dir/.gem/ruby/1.9.1
 export PATH="$GEM_HOME/bin:$PATH"
