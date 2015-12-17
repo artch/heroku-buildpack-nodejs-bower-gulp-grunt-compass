@@ -164,6 +164,13 @@ if [ ! -e $build_dir/Procfile ]; then
   fi
 fi
 
+# this is required to execute bundle and store gems in cachedir
+# we do it globally because we want to be able to run bundle even
+# from within grunt
+export HOME=$build_dir
+export GEM_HOME=$build_dir/.gem/ruby/2.2.0
+export PATH="$GEM_HOME/bin:$PATH"
+
 (
   # Run bower
   if [ $run_bower -ne 0 ]; then
@@ -176,12 +183,7 @@ fi
   fi
 )
 
-# this is required to execute bundle and store gems in cachedir
-# we do it globally because we want to be able to run bundle even
-# from within grunt
-export HOME=$build_dir
-export GEM_HOME=$build_dir/.gem/ruby/2.2.0
-export PATH="$GEM_HOME/bin:$PATH"
+
 
 (
   # porting in compass install
