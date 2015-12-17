@@ -122,6 +122,8 @@ fi
     # Install bower locally
     npm install --userconfig $build_dir/.npmrc --production bower 2>&1 | indent
   fi
+  
+  npm install -g grunt-cli
 )
 
 # Persist goodies like node-version in the slug
